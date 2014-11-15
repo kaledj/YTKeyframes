@@ -29,8 +29,7 @@ class Download(object):
         self.name = (str(yt.filename) + ".mp4")
 
     def getVideo(self):
-        self.vidfile = cv2.VideoCapture(self.name)
+        return self.name
 
     def __del__(self):
-        self.vidfile.release()
         os.remove(self.name)
